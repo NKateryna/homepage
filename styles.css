@@ -167,6 +167,17 @@ body {
 .skills__text {
   color: var(--secondary-text-color);
   text-align: justify;
+  padding-left: 40px;
+}
+
+.skills__list {
+  list-style-type: none;
+}
+
+.skills__list li::before {
+  content: "•";
+  color: var(--text-decoration-color);
+  padding-right: 5px;
 }
 
 .experiences {
