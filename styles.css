@@ -154,6 +154,8 @@ body {
 .intro_text {
   color: var(--secondary-text-color);
   text-align: justify;
+  padding: 0 15px;
+  font-style: italic;
 }
 
 .skills__header {
