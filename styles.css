@@ -87,7 +87,6 @@ body {
 .contact-info__block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .contact-info__block--center {
@@ -99,6 +98,7 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  align-items: center;
 }
 
 .contact-info__item:not(:last-child) {
@@ -154,6 +154,8 @@ body {
 .intro_text {
   color: var(--secondary-text-color);
   text-align: justify;
+  padding: 0 15px;
+  font-style: italic;
 }
 
 .skills__header {
