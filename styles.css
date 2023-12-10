@@ -224,6 +224,14 @@ body {
   margin-bottom: 10px;
 }
 
+.experiences__company-description {
+  color: var(--secondary-text-color);
+  text-align: justify;
+  font-size: 15px;
+  margin: 0 0 15px 15px;
+  font-style: italic;
+}
+
 .experiences__company-project-responsibilities {
   color: var(--secondary-text-color);
   padding-left: 20px;
