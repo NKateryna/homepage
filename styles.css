@@ -12,8 +12,9 @@ body {
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
-  --border-color: #ff9a0045;
+  --border-color: #085e1345;
   --text-decoration-color: #ff9a00;
+  --text-special-color: #1ca700;
 }
 
 .container {
@@ -25,7 +26,9 @@ body {
 .fh {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 0 70px;
 }
 
 .fv {
@@ -56,6 +59,8 @@ body {
 
   .contact_info_container {
     align-items: center;
+    gap: 0px;
+    align-items: flex-start;
   }
 
   .contact-info__block:not(:last-child) {
@@ -64,6 +69,14 @@ body {
 
   .experiences {
     margin-right: 0;
+  }
+
+  .skills__list-special-item {
+    margin-bottom: 100px;
+  }
+
+  .skills__list-special-item:hover::after {
+    top: 20px;
   }
 }
 
@@ -89,8 +102,8 @@ body {
   flex-direction: column;
 }
 
-.contact-info__block--center {
-  justify-content: center;
+.contact-info__block--avatar {
+  margin-left: auto;
 }
 
 .contact-info__item {
@@ -123,8 +136,8 @@ body {
 
 .contact-info__avatar {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border: 3px solid;
   border-color: var(--text-decoration-color);
@@ -180,6 +193,26 @@ body {
   padding-right: 5px;
 }
 
+.skills__list-special-item {
+  color: var(--text-special-color);
+  font-family: cursive;
+  position: relative;
+}
+
+.skills__list-special-item:hover::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: rgba(250, 249, 249, 0.164);
+  background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzNqbjQzYnB6cWlpdjRlNm83OHYzajA2ZDgyOWxzYWM2NWRlaXRrOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/BfE3Df5ONEushmcJZP/giphy.gif");
+  background-size: cover;
+  width: 140px;
+  height: 140px;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
 .experiences {
   flex: 1 1 60%;
   margin-right: 50px;
@@ -222,6 +255,11 @@ body {
   color: var(--primary-text-color);
   text-align: left;
   margin-bottom: 10px;
+}
+
+.experiences__company-project-name > a {
+  text-decoration: none;
+  color: var(--primary-text-color);
 }
 
 .experiences__company-description {
